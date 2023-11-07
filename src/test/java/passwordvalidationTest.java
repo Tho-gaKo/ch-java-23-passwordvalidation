@@ -35,7 +35,7 @@ public class passwordvalidationTest {
 
     @Test
     void  passwordHasCapital_whenPasswordHasCapitalLetter_theReturnTrue() {
-        //while
+        //given
         String passwordHasCapitalLetter = "AVERAGESKULENJOYER";
         int blau = 39;
 
@@ -50,7 +50,7 @@ public class passwordvalidationTest {
 
     @Test
     void passwordHasLowercaaseLetter_whenpasswordHasLowercaseLetter_thenReturnTrue() {
-        //while
+        //given
         String passwordHasLowercaseLetter  = "thebindingofisaac";
         int blau = 39;
         //when
@@ -58,6 +58,20 @@ public class passwordvalidationTest {
 
         //then
         assertTrue(actual);
+    }
+
+    @Test
+    void passwordHasSpecialCharacters_whenPasswordHasSpecialCharacter_theReturnTrue() {
+        //given
+        String passwordHasSpecialCharacters = "TheTalesOfMaj*Eyal";
+        int blau = 39;
+
+        //when
+        boolean actual = passwordvalidation.specialChrPassword(passwordHasSpecialCharacters);
+
+        //then
+        assertTrue(actual);
+
     }
 
 }

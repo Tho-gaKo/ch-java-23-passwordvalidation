@@ -70,8 +70,17 @@ if (pruefer(password, length)){
                 return false;
             }
     }
-
+    public static boolean specialChrPassword(String password) {
+        for (int i = 0; i < password.length() -1; i++) {
+            boolean containsSpecialChars = password.matches(".*[@#$%&+].*");
+            if (!containsSpecialChars) {
+            return true;
+        }
+        }
+        return false;
     }
+
+}
 
 
 
