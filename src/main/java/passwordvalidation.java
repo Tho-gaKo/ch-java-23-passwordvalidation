@@ -3,56 +3,75 @@ import java.util.Scanner;
 
 public class passwordvalidation {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in); //Create scanner
         System.out.println(" Enter a password ");
-
         String password = sc.nextLine(); //Read user input
-        System.out.println(" Password is: " + password);
+        int length = password.length();
+if (pruefer(password, length)){
+    System.out.println("valid");
 
+} else {
+    System.out.println("invalid");
+}
 
     }
-    public static boolean passwordIs8letters(String password) {
-        String sevenLetter = "TheCook";
 
-        boolean is8Letters = false;
-
-        if (sevenLetter.length() < password.length()) {
-            is8Letters = true;
-
-        }
-        if (is8Letters) {
+    public static boolean passwordIs8letters(int length) {
+        if (length >= 8) {
             return true;
+        } else {
+            return false;
         }
-    return false;
     }
-    public static boolean passwordContainsNumber(String password) {
-        String hasNumber = "benching405";
 
-        boolean containsNumber = false;
+    public static boolean hasDigits(String password, int length) {
+        for (int i = 0; i < length; i++){
+            if(Character.isDigit(password.charAt(i))){
 
-
-        if (containsNumber.){
-            containsNumber = true;
-        }
-        if (containsNumber) {
-            return true;
+                return true;
+            }
         }
         return false;
     }
-    public class containsNumber{
-        public static void main(String[] args) {
-            String hasNumber = "benching405";
-            char[] chars = hasNumber.toCharArray();
-            StringBuilder sb = new StringBuilder();
-            for(char c : chars) {
-                if(Character.isDigit(c)){
-                    sb.append(c);
-                }
+    public static boolean hasUppercaseLetters(String password, int length) {
+        for (int i = 0; i < length; i++){
+            if(Character.isUpperCase(password.charAt(i))) {
+
+                return true;
+
             }
-            System.out.println(sb);
         }
+        return false;
     }
+    public static boolean hasLowercaseLetters(String password, int length) {
+        for (int i = 0; i < length; i++){
+            if(Character.isLowerCase(password.charAt(i))) {
+
+                return true;
+            }
+        }
+        return false;
+    }
+    public static boolean pruefer (String password, int length){
+
+        if (hasDigits(password, length)&&hasLowercaseLetters(password, length)&&hasUppercaseLetters(password,length)&&passwordIs8letters(length)) {
+            return true;
+        } else {
+            return false;
+        }
 
 
 }
+
+    }
+
+
+
+
+
+
+
+
+
+

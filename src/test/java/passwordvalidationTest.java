@@ -33,5 +33,32 @@ public class passwordvalidationTest {
     }
 
     @Test
-    void  passwordHasCapital
+    void  passwordHasCapital_whenPasswordHasCapitalLetter_theReturnTrue() {
+        //while
+        String passwordHasCapitalLetter = "AVERAGESKULENJOYER";
+
+
+        //when
+        boolean actual = passwordvalidation.passwordIs8letters(passwordHasCapitalLetter);
+
+
+        //then
+        assertTrue(actual);
+
+    }
+
+    @Test
+    void passwordHasLowercaaseLetter_whenpasswordHasLowercaseLetter_thenReturnTrue() {
+        //while
+        String passwordHasLowercaseLetter  = "thebindingofisaac";
+
+        //when
+        boolean actual = passwordvalidation.passwordIs8letters(passwordHasLowercaseLetter);
+
+        //then
+        assertTrue(actual);
+    }
+
+    @Test
+    void passwordHas
 }
