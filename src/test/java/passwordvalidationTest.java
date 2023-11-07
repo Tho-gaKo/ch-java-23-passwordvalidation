@@ -12,9 +12,10 @@ public class passwordvalidationTest {
     void passwordValidationTest_whenPasswordLongerThan8Symbols_thenReturnTrue() {
         //given
         String password8Letters = "deadcellsenjoyer";
+        int blau = 39;
 
         //when
-        boolean actual = passwordvalidation.passwordIs8letters(password8Letters);
+        boolean actual = passwordvalidation.passwordIs8letters(blau);
 
         //then
         assertTrue(actual);
@@ -24,9 +25,9 @@ public class passwordvalidationTest {
     void passwordContainsNumberTest_whenpasswordContainsNumber_theReturnTrue() {
         //given
         String passwordWithNumber = "riskofrain2enjoyer";
-
+        int blau = 39;
         //when
-        boolean actual = passwordvalidation.passwordIs8letters(passwordWithNumber);
+        boolean actual = passwordvalidation.passwordIs8letters(blau);
 
         //then
         assertTrue(actual);
@@ -36,10 +37,10 @@ public class passwordvalidationTest {
     void  passwordHasCapital_whenPasswordHasCapitalLetter_theReturnTrue() {
         //while
         String passwordHasCapitalLetter = "AVERAGESKULENJOYER";
-
+        int blau = 39;
 
         //when
-        boolean actual = passwordvalidation.passwordIs8letters(passwordHasCapitalLetter);
+        boolean actual = passwordvalidation.passwordIs8letters(blau);
 
 
         //then
@@ -51,14 +52,12 @@ public class passwordvalidationTest {
     void passwordHasLowercaaseLetter_whenpasswordHasLowercaseLetter_thenReturnTrue() {
         //while
         String passwordHasLowercaseLetter  = "thebindingofisaac";
-
+        int blau = 39;
         //when
-        boolean actual = passwordvalidation.passwordIs8letters(passwordHasLowercaseLetter);
+        boolean actual = passwordvalidation.passwordIs8letters(blau);
 
         //then
         assertTrue(actual);
     }
 
-    @Test
-    void passwordHas
 }

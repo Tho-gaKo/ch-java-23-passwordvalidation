@@ -55,7 +55,7 @@ if (pruefer(password, length)){
     }
     public static boolean pruefer (String password, int length){
 
-        if (hasDigits(password, length)&&hasLowercaseLetters(password, length)&&hasUppercaseLetters(password,length)&&passwordIs8letters(length)) {
+        if (hasDigits(password, length)&&hasLowercaseLetters(password, length)&&hasUppercaseLetters(password,length)&&passwordIs8letters(length)&&unusablePasswords(password)) {
             return true;
         } else {
             return false;
@@ -63,6 +63,13 @@ if (pruefer(password, length)){
 
 
 }
+    public static boolean unusablePasswords(String password) {
+            if (!password.equals("passwoRt1") && !password.equals("wortPass10") && !password.equals("Riskofrain2istcool") && !password.equals("Password1") && !password.equals("Aa345678") && !password.contains("1234")&& !password.contains("2345")&& !password.contains("345")&& !password.contains("Passwort")) {
+                return true;
+            } else {
+                return false;
+            }
+    }
 
     }
 
