@@ -80,6 +80,11 @@ if (pruefer(password, length)){
         return false;
     }
 
+    //public static String generateSafePassword(String password) {
+
+
+  //  }
+
 }
 
 
